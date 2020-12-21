@@ -1,2 +1,2 @@
-# nodejs-express-typescript-mongodb-template
-Nodejs Express Typescript MongoDB Template
+# nodejs-express-mongodb-template
+Nodejs Express MongoDB Template
