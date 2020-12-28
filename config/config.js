@@ -5,6 +5,8 @@ require('dotenv').config();
 const configuration = {
   PORT: process.env.PORT,
   DATABASE_URL: process.env.DATABASE_URL,
+  username: process.env.DATABASE_URL.username,
+  password: process.env.DATABASE_URL.password,
 };
 
 module.exports = configuration;

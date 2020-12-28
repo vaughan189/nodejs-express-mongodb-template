@@ -4,15 +4,21 @@ const logger = require('./logger');
 const app = express();
 const port = process.env.PORT || 3000;
 
-const apiRoutes = require('./routes/api-routes');
+const Routes = require('./routes');
+
 const connectDB = require('./db/database');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.get('/', (req, res) => res.send('Hello World with Express'));
+app.get('/', (req, res) =>
+  res.send({
+    status: 'API Its Working',
+    message: 'Welcome to RESTHub crafted with love!',
+  })
+);
 
-app.use('/api', apiRoutes);
+app.use('/api/v1', Routes);
 
 app.get('*', function (req, res) {
   logger.info('users route');
