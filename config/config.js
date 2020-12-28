@@ -1,4 +1,4 @@
-require('dotenv').config()
+require('dotenv').config();
 
 // TODO: Add configuration for different environments(add different files).
 
