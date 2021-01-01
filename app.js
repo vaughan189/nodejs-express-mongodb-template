@@ -12,14 +12,14 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.get('/', (req, res) =>
   res.send({
     status: 'API Its Working',
-    message: 'Welcome to RESTHub crafted with love!',
+    message: 'NodeJS Express MongoDB Rest API',
   })
 );
 
 app.use('/api/v1', Routes);
 
 app.get('*', function (req, res) {
-  logger.info('users route');
+  logger.info('Wild Card Route');
   res.send('NodeJS Express MongoDB Rest API');
 });
 
